@@ -37,13 +37,7 @@ require_once "code.php";
                 <?php } else { ?>
 
                     <p><?= $message['description'] ?></p>
-
-
                     <p>Message posté le <?= $message['date'] ?></p>
-
-
-
-
                     <div class='d-flex'>
                         <form action='deleteMsg.php' method='post'>
                             <button name='delete' value='<?= $message['id'] ?>' type='submit' class='btn btn-danger me-2'><strong>X</strong></button>

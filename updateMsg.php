@@ -2,12 +2,11 @@
 
 require_once "db.php";
 
-$date = new DateTime();
+$date = new DateTime("Europe/Paris");
 $today = $date->format("d M Y à H\hi");
 
 $toUpdate = mysqli_real_escape_string($myConnect, htmlspecialchars($_POST['update']));
 $content = mysqli_real_escape_string($myConnect, htmlspecialchars($_POST['content']));
-$edited = false;
 
 
 if (isset($_POST['update']) && $_POST['update']) {

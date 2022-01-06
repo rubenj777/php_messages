@@ -2,7 +2,7 @@
 
 require_once "db.php";
 
-$date = new DateTime();
+$date = new DateTime("Europe/Paris");
 $today = $date->format("d M Y à H\hi");
 
 

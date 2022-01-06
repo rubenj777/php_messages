@@ -36,7 +36,14 @@ require_once "code.php";
         <div class='mb-3 p-3 card'>
           <h3 style='color:teal'><?= $message['auteur'] ?></h3>
           <p><?= $message['description'] ?></p>
+
+
+
           <p>Message posté le <?= $message['date'] ?></p>
+
+
+
+
           <div class='d-flex'>
             <form action='deleteMsg.php' method='post'>
               <button name='delete' value='<?= $message['id'] ?>' type='submit' class='btn btn-danger me-2'><strong>X</strong></button>
