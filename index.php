@@ -1,5 +1,5 @@
 <?php
-require_once "db.php";
+require_once "code.php";
 ?>
 
 <!DOCTYPE html>
@@ -30,16 +30,23 @@ require_once "db.php";
     </form>
     <div class="d-flex flex-column col-8">
       <?php foreach ($messages as $message) { ?>
-        <div class="mb-3 p-3 card">
-          <h3 style="color:teal"><?= $message['auteur'] ?></h3>
+        <div class='mb-3 p-3 card'>
+
+          <h3 style='color:teal'><?= $message['auteur'] ?></h3>
           <p><?= $message['description'] ?></p>
           <p>Message posté le <?= $message['date'] ?></p>
-          <form action="deleteMsg.php" method="post">
-            <button name="delete" value="<?= $message['id'] ?>" href="" type="submit" class="btn btn-danger"><strong>X</strong></button>
-          </form>
+          <div class='d-flex'>
+            <form action='deleteMsg.php' method='post'>
+              <button name='delete' value='<?= $message[' id'] ?>' type='submit' class='btn btn-danger me-2'><strong>X</strong></button>
+            </form>
+            <a href="message.php?id=<?= $message['id'] ?>" class="btn btn-info">Voir le message</a>
+          </div>
+
         </div>
       <?php } ?>
     </div>
+
+  </div>
 
   </div>
 
