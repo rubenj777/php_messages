@@ -2,7 +2,7 @@
 
 require_once "db.php";
 
-$toDelete = $_POST['delete'];
+$toDelete = htmlspecialchars($_POST['delete']);
 
 if (isset($_POST['delete']) && $_POST['delete']) {
     $deleteQuery = "DELETE FROM messages WHERE id = '$toDelete'";

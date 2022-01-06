@@ -16,7 +16,7 @@ require_once "code.php";
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/messageboard">Message Board</a>
+      <a class="navbar-brand" href="/messageboard">Facebook</a>
     </div>
   </nav>
 
