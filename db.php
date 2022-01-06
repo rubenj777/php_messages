@@ -19,6 +19,3 @@ $myQuery = "SELECT * FROM messages";
 // méthode qui permet de réaliser la requête SQL
 // renvoie un tableau
 $messages = mysqli_query($myConnect, $myQuery);
-
-$date = new DateTime();
-$today = $date->format("d M Y à H\hi");

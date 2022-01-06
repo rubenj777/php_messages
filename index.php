@@ -33,7 +33,7 @@ require_once "db.php";
         <div class="mb-3 p-3 card">
           <h3 style="color:teal"><?= $message['auteur'] ?></h3>
           <p><?= $message['description'] ?></p>
-          <p><?= $message['date'] ?></p>
+          <p>Message posté le <?= $message['date'] ?></p>
           <form action="deleteMsg.php" method="post">
             <button name="delete" value="<?= $message['id'] ?>" href="" type="submit" class="btn btn-danger"><strong>X</strong></button>
           </form>
