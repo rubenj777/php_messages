@@ -11,6 +11,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $result = mysqli_query($myConnect, $selectQuery);
     $message = $result->fetch_assoc();
 } else {
-    $myQuery = "SELECT * FROM messages";
+    $myQuery = "SELECT * FROM messages ORDER BY date DESC";
     $messages = mysqli_query($myConnect, $myQuery);
 }

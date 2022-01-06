@@ -28,10 +28,12 @@ require_once "code.php";
         <button type="submit" class="btn btn-success m-2">Poster</button>
       </div>
     </form>
-    <div class="d-flex flex-column col-8">
-      <?php foreach ($messages as $message) { ?>
-        <div class='mb-3 p-3 card'>
 
+    <div class="d-flex flex-column col-8">
+
+      <?php foreach ($messages as $message) { ?>
+
+        <div class='mb-3 p-3 card'>
           <h3 style='color:teal'><?= $message['auteur'] ?></h3>
           <p><?= $message['description'] ?></p>
           <p>Message posté le <?= $message['date'] ?></p>
@@ -41,10 +43,12 @@ require_once "code.php";
             </form>
             <a href="message.php?id=<?= $message['id'] ?>" class="btn btn-info">Voir le message</a>
           </div>
-
         </div>
+
       <?php } ?>
+
     </div>
+
 
   </div>
 
