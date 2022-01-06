@@ -37,7 +37,7 @@ require_once "code.php";
           <p>Message posté le <?= $message['date'] ?></p>
           <div class='d-flex'>
             <form action='deleteMsg.php' method='post'>
-              <button name='delete' value='<?= $message[' id'] ?>' type='submit' class='btn btn-danger me-2'><strong>X</strong></button>
+              <button name='delete' value='<?= $message['id'] ?>' type='submit' class='btn btn-danger me-2'><strong>X</strong></button>
             </form>
             <a href="message.php?id=<?= $message['id'] ?>" class="btn btn-info">Voir le message</a>
           </div>
