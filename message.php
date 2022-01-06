@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once "code.php";
+require_once "auth.php";
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +19,34 @@ require_once "code.php";
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="/messageboard">Facebook</a>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto align-items-center">
+
+                    <?php
+
+                    if (isset($_SESSION['connected']) && $_SESSION['connected']) { ?>
+                        <li>
+                            <form action='' method='post'>
+                                <input type='submit' name='logout' value='Se déconnecter' class='btn btn-secondary me-2'>
+                            </form>
+                        </li>
+                        <li style="color:black">Bienvenue, <?= $_SESSION['username']; ?></li>
+
+                    <?php } else { ?>
+
+                        <li class=''>
+                            <form action='' method='post' class='d-flex'>
+                                <input type='text' name='username' placeholder="username" class="me-3">
+                                <input type='password' name='password' placeholder="password" class="me-3">
+                                <input type='submit' value='Se connecter' class='btn btn-success me-3'>
+                            </form>
+                        </li>
+
+                    <?php }
+                    ?>
+
+                </ul>
+            </div>
         </div>
     </nav>
 
